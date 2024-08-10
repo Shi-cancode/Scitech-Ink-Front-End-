@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowLeft, FaBars, FaXmark } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 import Logo from "@/public/logo.svg";
 import { Button } from "./ui/Button";
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/Drawer";
 import { cn } from "@/utils/tw-merge";
 
 const navLinks = [
@@ -16,12 +16,12 @@ const navLinks = [
     link: "/",
   },
   {
-    name: "Purchase Art",
-    link: "/",
+    name: "Aviations",
+    link: "/aviations",
   },
   {
     name: "Tales",
-    link: "/",
+    link: "/tales",
   },
   {
     name: "Artworks",
@@ -31,6 +31,8 @@ const navLinks = [
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const pathname = usePathname();
+  console.log(pathname);
   // opening and closing the sidebar
   const handleSidebarOpenClose = () => {
     setSidebarOpen((prev) => !prev);

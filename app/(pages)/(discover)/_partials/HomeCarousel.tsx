@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +10,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/Carousel";
+
 import Autoplay from "embla-carousel-autoplay";
 import { contentType } from "@/types/carouselContent";
 import moment from "moment";
@@ -18,7 +20,7 @@ type ContentCarouselProps = {
   items: contentType[];
 };
 
-const ContentCarousel = ({ items }: ContentCarouselProps) => {
+const HomeCarousel = ({ items }: ContentCarouselProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = React.useState(0);
@@ -48,10 +50,10 @@ const ContentCarousel = ({ items }: ContentCarouselProps) => {
         ]}
       >
         <CarouselContent className="w-full gap-[30px]">
-          {items.slice(0,4).map((item, index) => (
+          {items.slice(0, 4).map((item, index) => (
             <CarouselItem
               key={index}
-              className="bg-bg_black h-[622px] w-[90%] rounded-[40px] p-8 md:p-[60px]"
+              className="bg-bg_black h-[409px] w-[90%] rounded-[40px] p-8 md:p-[60px]"
             >
               <div className="w-full h-full flex flex-col justify-end">
                 <div className="flex flex-col gap-3">
@@ -72,23 +74,8 @@ const ContentCarousel = ({ items }: ContentCarouselProps) => {
           ))}
         </CarouselContent>
       </Carousel>
-
-      {/* Add navigation controls */}
-
-      {/* Optional: Display current slide and total slides */}
-      <div className=" mt-5 flex items-center justify-center gap-3">
-        {Array.from({ length: count }).map((_, idx) => (
-          <div
-          key={idx}
-            className={cn(
-              "w-[15px] h-[15px] rounded-full",
-              current === idx + 1 ? "bg-secondary" : "bg-secondary/20"
-            )}
-          ></div>
-        ))}
-      </div>
     </div>
   );
 };
 
-export default ContentCarousel;
+export default HomeCarousel;

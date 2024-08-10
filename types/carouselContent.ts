@@ -3,4 +3,5 @@
     writer:string,
     createdAt:Date,
     title:string
+    subtitle:string;
  }

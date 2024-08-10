@@ -48,7 +48,7 @@ const ContentCarousel = ({ items }: ContentCarouselProps) => {
         ]}
       >
         <CarouselContent className="w-full gap-[30px]">
-          {items.map((item, index) => (
+          {items.slice(0,4).map((item, index) => (
             <CarouselItem
               key={index}
               className="bg-bg_black h-[622px] w-[90%] rounded-[40px] p-[60px]"

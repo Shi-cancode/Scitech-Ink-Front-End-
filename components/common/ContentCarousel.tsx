@@ -51,7 +51,7 @@ const ContentCarousel = ({ items }: ContentCarouselProps) => {
           {items.slice(0,4).map((item, index) => (
             <CarouselItem
               key={index}
-              className="bg-bg_black h-[622px] w-[90%] rounded-[40px] p-[60px]"
+              className="bg-bg_black h-[622px] w-[90%] rounded-[40px] p-8 md:p-[60px]"
             >
               <div className="w-full h-full flex flex-col justify-end">
                 <div className="flex flex-col gap-3">
@@ -63,7 +63,7 @@ const ContentCarousel = ({ items }: ContentCarouselProps) => {
                       {moment(item.createdAt).format("DD MMM YYYY")}
                     </h2>
                   </div>
-                  <h2 className="font-semibold text-[34px] leading-[42.82px]">
+                  <h2 className="font-semibold text-2xl md:text-[34px] md:leading-[42.82px] text-white">
                     {item.title}
                   </h2>
                 </div>

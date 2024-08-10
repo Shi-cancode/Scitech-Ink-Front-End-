@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/common/Footer";
 
 const Plus_Jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-1">{children}</main>
+          <Footer/>
         </div>
       </body>
     </html>

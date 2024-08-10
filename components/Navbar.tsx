@@ -36,7 +36,7 @@ const Navbar = () => {
     setSidebarOpen((prev) => !prev);
   };
   return (
-    <nav className="relative flex flex-col py-[14px] px-10">
+    <nav className="relative flex flex-col py-[14px] px-10 z-50">
       {/* nav content */}
       <div className="flex items-center justify-between">
         <div className=" flex justify-between w-full lg:w-[55%]">

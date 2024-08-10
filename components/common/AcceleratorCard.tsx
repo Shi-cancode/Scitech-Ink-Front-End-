@@ -9,7 +9,7 @@ const AcceleratorCard = ({ variant }: { variant: string }) => {
   return (
     <div
       className={cn(
-        "flex flex-col gap-[46px] py-[55px] px-10 rounded-xl",
+        "flex flex-col gap-[46px] py-[55px] px-8 md:px-10 rounded-xl",
         variant === "primary" ? "bg-[#858585]" : "bg-[#ABABAB]"
       )}
     >
@@ -17,7 +17,7 @@ const AcceleratorCard = ({ variant }: { variant: string }) => {
         <h2 className="font-normal text-[22px] leading-[27px] text-white">
           Lorem
         </h2>
-        <h2 className="font-semibold text-[36px] leading-[45px] text-white max-w-[197px]">
+        <h2 className="font-semibold text-3xl md:text-[36px] leading-[45px] text-white max-w-[197px]">
           Accelerate your digital arts
         </h2>
       </div>

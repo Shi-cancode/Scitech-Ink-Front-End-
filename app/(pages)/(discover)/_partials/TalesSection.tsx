@@ -4,7 +4,7 @@ import React from "react";
 
 const TalesSection = () => {
   return (
-    <section className="grid grid-cols-3 gap-[22px] pt-[70px] px-[60px] xl:px-0 max-w-screen-xl mx-auto">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[22px] pt-[70px] px-8 lg:px-[60px] xl:px-0 max-w-screen-xl mx-auto">
       {carouselData.map((item) => (
         <ContentCard
           writer={item.writer}
